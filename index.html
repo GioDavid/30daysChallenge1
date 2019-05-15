@@ -59,6 +59,15 @@
 
 <script>
 
+  document.addEventListener('keydown', (event) => {
+    const { keyCode } = event; 
+    const audio = document.querySelector(`audio[data-key="${keyCode}"]`);
+    if (!audio) return;
+
+    audio.currentTime = 0;
+    audio.play();
+
+  });
 </script>
 
 
